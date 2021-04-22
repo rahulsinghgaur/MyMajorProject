@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Download Notes</title>
+	{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/downloadnotes.css'%}">
+</head>
+<body>
+	<div class="main-box" style="background-image:url(/static/img/downloadnotes/lbg2.jpg);">
+		<div class="heading">
+			<h1 class = "w">WELCOME TO <span class="head">B.TECH</span></h1>
+		</div>
+
+		<div class="selection-box">
+		<form class="form" method="POST" action="/downloadsection/">
+		{% csrf_token %}
+			<section class="plan cf">
+				<h1>Please Select Your Branch</h1>
+				<input type="radio" name="r" id="cse" value="CSE" checked><label class="four col" for="cse">CSE</label>
+				<input type="radio" name="r" id="ce" value="CE"><label class="four col" for="ce">CE</label>
+				<input type="radio" name="r" id="me" value="ME"><label class="four col" for="me">ME</label>
+				<input type="radio" name="r" id="ee" value="EE"><label class="four col" for="ee">EE</label>
+				<input type="radio" name="r" id="ece" value="ECE"><label class="four col"for="ece">ECE</label>
+			</section>
+			<section class="payment-plan">
+				<h1>Please Select Your Semester</h1>
+				<input type="radio" name="radio2" id="1st" value="1st" onclick="page()" checked><label	 class="four col" for="1st">1st</label>
+				<input type="radio" name="radio2" id="2nd" value="2nd" onclick="page()"><label class="four col" for="2nd">2nd</label>
+				<input type="radio" name="radio2" id="3rd" value="3rd" onclick="page()"><label class="four col" for="3rd">3nd</label>
+				<input type="radio" name="radio2" id="4th" value="4th" onclick="page()"><label class="four col" for="4th">4th</label>
+				<input type="radio" name="radio2" id="5th" value="5th" onclick="page()"><label class="four col" for="5th">5th</label>
+				<input type="radio" name="radio2" id="6th" value="6th" onclick="page()"><label class="four col" for="6th">6th</label>
+				<input type="radio" name="radio2" id="7th" value="7th" onclick="page()"><label class="four col" for="7th">7th</label>
+				<input type="radio" name="radio2" id="8th" value="8th" onclick="page()"><label class="four col" for="8th">8th</label>
+			</section>	
+			<input id="btn" type="submit" value="Submit">		
+		</form>
+	</div>
+
+<script>
+	function page() {
+		document.getElementById('btn').click();
+	}
+</script>
+</body>
+</html>

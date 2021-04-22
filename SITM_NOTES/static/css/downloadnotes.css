@@ -1,0 +1,138 @@
+*
+{
+	margin: 0;
+	padding: 0;
+	font-family: Century Gothic;
+}
+.main-box
+{
+	height: 100%;
+	width: 100%;
+	background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+	background-position: center;
+	background-size: cover;
+	position: absolute;
+}
+
+.heading
+{
+	margin-top: 5%;
+	text-align: center;
+	color: rgb(255, 255, 255);
+
+}
+.head
+{
+	color:#17CBEB;
+}
+
+.selection-box
+{
+	margin-top: 10%;
+	margin-left: 5%;
+	text-align: center;
+	position: center;
+	width: 90%;
+	height: 46%;
+	border-radius: 30px;
+	color: white;
+	border:5px solid black;
+	background-color: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.8));
+
+}
+
+
+
+
+h2, h3, h4, h5, h6{
+	font-weight: 200;
+}
+
+h1{
+	text-align: center;
+	padding-bottom: 10px;
+	font-size: 38px;
+	margin:5px auto;
+}
+
+/* CONTAINERS */
+.four { 
+	width: 10.26%;
+	height: 10%;
+	max-width: 20.26%;
+	}
+
+
+/* COLUMNS */
+
+.col {
+  display: block;
+  float: left;
+
+  margin: 1% 0 1% 1.6%;
+}
+
+.col:first-of-type { margin-left: 10; }
+
+
+/* CLEARFIX */
+
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
+}
+
+/* FORM */
+
+.form .plan input, .form  input, .form input{
+	display: none;
+	
+}
+
+.form label{
+	position: relative;
+	color: #fff;
+	background-color:black;
+	font-size: 26px;
+	text-align: center;
+	height: 50px;
+	line-height: 50px;
+	display: block;
+	cursor: pointer;
+	border: 3px solid transparent;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.form .plan input:checked + label, .form .payment-plan input:checked + label, .form .payment-type input:checked + label{
+	border: 3px solid white;
+	background-color: crimson;
+}
+
+.form .plan input:checked + label:after, form .payment-plan input:checked + label:after, .form .payment-type input:checked + label:after{
+	content: "\2713";
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	border-radius: 100%;
+	border: 2px solid #333;
+	background-color: crimson;
+	z-index: 999;
+	position: absolute;
+	top: -10px;
+	right: -10px;
+}
+
+.w{
+	font-size: 58px;;
+}

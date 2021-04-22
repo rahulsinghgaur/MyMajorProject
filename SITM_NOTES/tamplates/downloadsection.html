@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>First Year Notes</title>
+	{% load static%}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/downloadsection.css'%}">
+</head>
+<body>
+	<div class="main-box">
+		<h1 class="heading">Branch : {{branch}}</h1>
+		<div class="sem-box">
+			<h1 class="semheading">{{sem}} Semester Notes</h1>
+			<table>
+				<tr>
+				{% for i in notes %}
+					<td>{{i.subcode}}:{{i.name}}</td>
+					<td class="link-btn"><a href="{{i.notesfile.url}}" download><img src="downloadnotes/dw.jpg"></a></td>
+				</tr>
+				{% endfor %}		
+			</table>	
+		</div>		
+		</div>
+	</div>
+</body>
+</html>

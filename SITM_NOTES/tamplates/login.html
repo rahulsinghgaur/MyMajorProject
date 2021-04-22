@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	{% load static%}
+	<title>Login And Registration</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/login.css'%}">
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<body>
+
+	<div class="main-box" style="background-image : url(/static/img/login/loginbg.jpg);;">
+
+
+
+		<input type="checkbox" id="check">
+		<label for="check">
+			<i class="fas fa-bars" id="btoon"></i>
+			<i class="fas fa-times" id="cancel"></i>
+		</label>
+		<div class="sidebar">
+			<header>My Menu</header>
+			<a href="/">
+				<i class="fas fa-qrcode"></i>
+				<span>Home</span>
+			</a>
+			<a href="/downloadnotes">
+				<i class="fas fa-link"></i>
+				<span>Download</span>
+			</a>
+			<a href="/services">
+				<i class="fas fa-stream"></i>
+				<span>Services</span>
+			</a>
+			<a href="/about">
+				<i class="fas fa-calendar"></i>
+				<span>About</span>
+			</a>
+			<a href="/login" class="active">
+				<i class="far fa-question-circle"></i>
+				<span>Login</span>
+			</a>
+			<a href="/learnmore">
+				<i class="fas fa-sliders-h"></i>
+				<span>Learn More</span>
+			</a>
+			<a href="/contact">
+				<i class="far fa-envelope"></i>
+				<span>Contact</span>
+			</a>
+		</div>
+
+
+
+
+		<div class="form-box">
+			<div class="button-box">
+				<div id="btn"></div>
+				<button type="button" class="toggle-btn" onclick="login()">Log In</button>
+				<button type="button" class="toggle-btn" onclick="register()">Sign Up</button>
+			</div>
+
+			<div class="social-icons">
+				<img src="{% static 'img/login/fb.png'%}">
+				<img src="{% static 'img/login/gll.svg'%}">
+				<img src="{% static 'img/login/twl.png'%}">
+			</div>
+
+			<form id="login" class="input-form" method="POST" action="/login/">
+				{% csrf_token %}
+				<input type="text" name="email" class="input-place" placeholder="Email Id" required>
+				<input type="password" name="password" class="input-place" placeholder="Password" required>
+				<input type="checkbox" class="check-box"><span class="spn">Remember Password</span>
+				<button type="submit" class="submit-btn">Log In</button>
+			</form>
+
+			<form id="register" class="input-form" method="POST" action="/register/">
+				{% csrf_token %}
+				<input type="text" name="name" class="input-place" placeholder="Name" required>
+				<input type="text" name="email" class="input-place" placeholder="Email Id" required>
+				<input type="text" name="password" class="input-place" placeholder="Password" required>
+				<input type="checkbox" class="check-box"><span class="spn">I agree to Terms & Condition</span>
+				<button type="submit" class="submit-btn">Register</button>
+			</form>
+
+		</div>
+
+	</div>
+
+
+	<script>
+		var x = document.getElementById("login");
+		var y = document.getElementById("register");
+		var z = document.getElementById("btn");
+
+		function register() {
+			x.style.left = "-400px";
+			y.style.left = "50px";
+			z.style.left = "110px";
+
+		}
+
+		function login() {
+			x.style.left = "50px";
+			y.style.left = "450px";
+			z.style.left = "0px";
+		}
+
+	</script>
+
+
+
+
+
+
+
+
+</body>
+
+</html>

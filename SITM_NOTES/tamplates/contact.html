@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% load static %}
+	<link rel="stylesheet" href="{% static 'css/contact.css'%}">
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+	<div class="main-box" style="background-image: url(/static/img/contact/bbg.jpg);">
+		<div class="heading">
+		 <h1>Contact US</h1><br>
+		 <p>Sakshi Institute of Technology and Management, Myana, Guna</p>
+		</div>
+
+
+		<div class="quary-box">
+			<h2 class="sendmsg">Send Message</h1>
+			<form class="input-form" action="/contact/" method="POST">
+				{% csrf_token %}
+				<input name="name" type="text" class="input-place" placeholder="Name" required>
+				<input name="email" type="email" class="input-place" placeholder="Email" required>
+				<input name="subject" type="text" class="input-place" placeholder="Subject">
+
+				<textarea name="desc" rows="5"cols="50" class="input-place" placeholder="Type Your Message..."></textarea><br>
+     
+				<button name="submit" type="submit" class="btn" onclick="process.php">Send</button>
+				<button type="reset" class="btn">Reset</button>
+				<button type="cancel" class="btn">Cancel</button>
+
+
+			</form>
+			
+		</div>
+
+		<div class="information-box">
+			<table class="itable">
+				<tr>
+					<td><a href="https://goo.gl/maps/N8sbPayecRg8Za347"><img src="{% static 'img/contact/location.jpg'%}"></a></td>
+					<td><h4>Address</h4>Sakshi Institute of Technology and Management, Somya Premises, A.B Road, Myana, Guna, Madhya Pradesh 473001
+				</tr>
+
+				<tr>
+					<td><img src="{% static 'img/contact/phone.jpg'%}"></td>
+					<td><h4>Phone</h4>+91 9876543210</td>
+				</tr>
+
+				<tr>
+					<td><img src="{% static 'img/contact/email.jpg'%}"></td>
+					<td><h4>Email</h4>sitmguna0954@gmail.com</td>
+				</tr>
+			</table>
+		</div>
+
+
+	</div>
+
+
+
+
+
+
+
+	<input type="checkbox" id="check">
+    <label for="check">
+      <i class="fas fa-bars" id="btn"></i>
+      <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+      <header>My Menu</header>
+      <a href="/" >
+        <i class="fas fa-qrcode"></i>
+        <span>Home</span>
+      </a>
+      <a href="/downloadnotes">
+        <i class="fas fa-link"></i>
+        <span>Download</span>
+      </a>
+      <a href="/services">
+        <i class="fas fa-stream"></i>
+        <span>Services</span>
+      </a>
+      <a href="/about">
+         <i class="fas fa-calendar"></i>
+        <span>About</span>
+      </a>
+      <a href="/login">
+        <i class="far fa-question-circle"></i>
+        <span>Login</span>
+      </a>
+      <a href="/learnmore">
+        <i class="fas fa-sliders-h"></i>
+        <span>Learn More</span>
+      </a>
+      <a href="/contact" class="active">
+        <i class="far fa-envelope"></i>
+        <span>Contact</span>
+      </a>
+    </div>
+
+
+
+
+
+
+</body>
+</html>
